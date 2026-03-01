@@ -35,6 +35,11 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    other: {
+      'naver-site-verification': '7bd1732e655b11d3b305a6c58a713a31',
+    },
+  },
 };
 
 const jsonLd = {
