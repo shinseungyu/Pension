@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lifeportplus.com/sitemap.xml
+
+#DaumWebMasterTool:747cd0427aac93f5a98c6e8c336f52f2c39fe170066b8ceafdbccd67898d439b:+oZHVPCbVMMNjxli5LDdog==
