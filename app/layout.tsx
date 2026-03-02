@@ -40,6 +40,9 @@ export const metadata: Metadata = {
       'naver-site-verification': '7bd1732e655b11d3b305a6c58a713a31',
     },
   },
+  other: {
+    'google-adsense-account': 'ca-pub-5378247298190063',
+  },
 };
 
 const jsonLd = {
@@ -54,6 +57,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="ko">
       <head>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5378247298190063" crossOrigin="anonymous"></script>
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
