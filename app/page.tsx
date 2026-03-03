@@ -106,7 +106,7 @@ export default function Page() {
       />
       
       <header>
-        <h1 id="main-title">직장인 필독: 연금저축 세액공제 혜택과 중도해지 리스크 완벽 가이드</h1>
+        <h1 id="main-title">연금추천사이트</h1>
       </header>
 
       {/* 히어로 썸네일 이미지 영역 */}
