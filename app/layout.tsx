@@ -27,10 +27,15 @@ export const metadata: Metadata = {
     locale: 'ko_KR',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: '연금저축 완벽 가이드 - 13월의 월급 만들기',
+    description: '연금저축 세액공제 한도, 펀드 vs 보험 비교, 중도해지 리스크 완벽 정리.',
+    images: ['https://lifeportplus.com/thumb.jpg'],
+  },
   icons: {
     icon: '/favicon.ico',
   },
-
   robots: {
     index: true,
     follow: true,
@@ -39,6 +44,15 @@ export const metadata: Metadata = {
     other: {
       'naver-site-verification': '7bd1732e655b11d3b305a6c58a713a31',
     },
+    google: '여기에_구글_인증코드_입력', // 필요시 변경
+  },
+  authors: [{ name: '금융 전문가' }],
+  publisher: 'Pension Savings Guide',
+  formatDetection: {
+    telephone: false,
+    date: false,
+    address: false,
+    email: false,
   },
   other: {
     'google-adsense-account': 'ca-pub-5378247298190063',
