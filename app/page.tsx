@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '연금 추천 및 비교 가이드 - 든든한 은퇴준비의 시작',
+  title: '2026 연금저축 추천 가이드 - 든든한 은퇴준비의 시작',
   description: '연말정산에서 가장 강력한 무기인 연금저축. 펀드와 보험 비교, 2026년 최신 세액공제 한도, 최악의 리스크인 중도해지 가산세까지 완벽하게 파헤칩니다.',
   alternates: {
     canonical: '/',
