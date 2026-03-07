@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-
+import Link from 'next/link';
+import postsData from '@/data/posts.json';
 export const metadata: Metadata = {
   title: '2026 연금저축 추천 가이드 - 든든한 은퇴준비의 시작',
   description: '연말정산에서 가장 강력한 무기인 연금저축. 펀드와 보험 비교, 2026년 최신 세액공제 한도, 최악의 리스크인 중도해지 가산세까지 완벽하게 파헤칩니다.',
@@ -250,6 +251,40 @@ export default function Page() {
         <h2 id="conclusion-heading">결론: 시간은 당신의 편, 지금 당장 시작하세요</h2>
         <p><strong>연금저축</strong>은 단순히 세금을 돌려받기 위한 단기 금융 상품이 아닙니다. 은퇴 후 안정적인 현금 흐름을 창출하기 위한 평생의 파트너입니다. <strong>세액공제</strong>라는 확실한 수익을 챙기면서, 장기 투자의 복리 마법을 누릴 수 있는 가장 합법적이고 효율적인 수단입니다. 중도 해지의 <strong>가산세</strong> 리스크를 명확히 인지하고, 자신의 경제 상황에 맞는 적절한 금액으로 지금 당장 노후 준비의 첫걸음을 떼시길 바랍니다. 일찍 시작할수록 시간은 당신의 든든한 아군이 될 것입니다.</p>
       </footer>
+
+      {/* Board Preview Section */}
+      <section className="mt-12 bg-white rounded-xl border border-gray-200 p-8 shadow-sm">
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-xl font-bold text-gray-900 border-l-4 border-blue-600 pl-3">
+            추천 매거진 & 최신 소식
+          </h2>
+          <Link href="/board" className="text-sm font-semibold text-blue-600 hover:underline">
+            전체 보기 →
+          </Link>
+        </div>
+        <div className="flex flex-col gap-4">
+          {(postsData as any[]).slice(0, 3).map((post: any) => (
+            <Link 
+              key={post.id} 
+              href={`/board?id=${post.id}`} 
+              className="flex flex-col gap-3 rounded-lg border border-gray-100 bg-gray-50 p-5 transition-all hover:bg-gray-100/80 hover:shadow-sm"
+            >
+              <div className="flex items-center gap-3 mb-1">
+                <span className="inline-flex rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700">
+                  {post.category}
+                </span>
+                <span className="text-xs text-gray-500">{post.date}</span>
+              </div>
+              <h3 className="text-base font-bold text-gray-900 leading-snug group-hover:text-blue-600 transition-colors">
+                {post.title}
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed line-clamp-2">
+                {post.summary}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </section>
     </article>
   );
 }

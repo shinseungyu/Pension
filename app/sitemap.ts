@@ -9,16 +9,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: 'https://lifeportplus.com/sub1',
+      url: 'https://lifeportplus.com/board',
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: 'https://lifeportplus.com/sub2',
+      url: 'https://lifeportplus.com/privacy-policy',
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.5,
+    },
+    {
+      url: 'https://lifeportplus.com/terms-of-service',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+    {
+      url: 'https://lifeportplus.com/cookie-policy',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.5,
     },
   ];
 }

@@ -11,17 +11,25 @@ export default function Footer() {
         <nav>
           <ul className="flex flex-wrap gap-4 md:gap-8 justify-center">
             <li>
-              <Link href="/privacy" className="hover:text-gray-900 transition-colors">
-                Privacy Policy
+              <Link href="/privacy-policy" className="hover:text-gray-900 transition-colors">
+                개인정보 처리방침
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-gray-900 transition-colors">
-                Contact Us
+              <Link href="/terms-of-service" className="hover:text-gray-900 transition-colors">
+                이용약관
+              </Link>
+            </li>
+            <li>
+              <Link href="/cookie-policy" className="hover:text-gray-900 transition-colors">
+                쿠키 정책
               </Link>
             </li>
           </ul>
         </nav>
+        <div className="mt-4 md:mt-0 md:ml-4 text-center md:text-right">
+          <p>문의: tlsfkaus0711@gmail.com</p>
+        </div>
       </div>
     </footer>
   );

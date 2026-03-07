@@ -1,4 +1,5 @@
 import type {Metadata} from 'next';
+import Script from 'next/script';
 import './globals.css'; // Global styles
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -71,9 +72,17 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="ko">
       <head>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5378247298190063" crossOrigin="anonymous"></script>
-        {/* Google Tag Manager */}
         <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body suppressHydrationWarning className="bg-gray-50 text-gray-900 antialiased pt-16 min-h-screen flex flex-col">
+        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5378247298190063" crossOrigin="anonymous" strategy="afterInteractive" />
+        {/* Google Tag Manager */}
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -83,12 +92,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
         {/* End Google Tag Manager */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
-      <body suppressHydrationWarning className="bg-gray-50 text-gray-900 antialiased pt-16 min-h-screen flex flex-col">
+
         <Header />
         <main className="flex-grow w-full max-w-6xl mx-auto p-4 md:p-8">
           {children}
