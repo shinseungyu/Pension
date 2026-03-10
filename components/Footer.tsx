@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="w-full border-t border-gray-200 bg-white mt-12 py-8">
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
         <div className="mb-4 md:mb-0">
-          <p>&copy; {new Date().getFullYear()} LifePortPlus. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} LifePortPlus (lifeportplus.com). All rights reserved.</p>
         </div>
         
         <nav>
